@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rmq-test-nest-producer
+  labels:
+    name: rmq-test-nest-producer
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
+spec:
+  tls:
+    - hosts:
+        - nest.shakar.tech
+      secretName: lets-encrypt-nest.shakar.tech
+  rules:
+    - host: nest.shakar.tech
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: rmq-test-nest-producer
+                port:
+                  name: http-app

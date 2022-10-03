@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rmq-test-nest-producer
+spec:
+  ports:
+    - name: http-app
+      port: 80

@@ -1,0 +1,22 @@
+resources:
+  - ../../base
+patches:
+  - path: ingress-patch.yaml
+    target:
+      kind: Ingress
+      name: rmq-test-nest-producer
+
+commonLabels:
+  app: staging-rmq-test-nest-producer
+namespace: staging
+configMapGenerator:
+  - behavior: merge
+    literals:
+      - ENV=staging
+    name: rmq-test-nest-producer
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+  - name: 5h4k4r/rmq-test-nest-producer
+    newName: 5h4k4r/rmq-test-nest-producer
+    newTag: 6e1f2110fb5671c41a5ac067bb4ed03083c5e6d9

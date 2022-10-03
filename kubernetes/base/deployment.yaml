@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rmq-test-nest-producer
+spec:
+  selector:
+    matchLabels:
+      app: rmq-test-nest-producer
+  template:
+    metadata:
+      labels:
+        app: rmq-test-nest-producer
+    spec:
+      containers:
+        - name: rmq-test-nest-producer
+          imagePullPolicy: Always
+          image: 5h4k4r/rmq-test-nest-producer:latest
+          resources:
+            limits:
+              memory: "50Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 3000
