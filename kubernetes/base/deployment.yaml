@@ -25,5 +25,5 @@ spec:
             - name: PORT
               valueFrom:
                 configMapKeyRef:
-                  name: nest
+                  name: rmq-test-nest-producer
                   key: PORT
