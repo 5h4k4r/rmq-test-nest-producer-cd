@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - nest.shakar.tech
-      secretName: lets-encrypt-nest.shakar.tech
+        - producer.shakar.tech
+      secretName: lets-encrypt-producer.shakar.tech
   rules:
-    - host: nest.shakar.tech
+    - host: producer.shakar.tech
       http:
         paths:
           - pathType: Prefix

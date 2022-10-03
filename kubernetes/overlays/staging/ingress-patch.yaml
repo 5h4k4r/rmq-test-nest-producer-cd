@@ -1,11 +1,11 @@
 - op: replace
   path: /spec/rules/0/host
-  value: staging.nest.shakar.tech
+  value: staging.producer.shakar.tech
 - op: add
   path: /spec/tls
   value:
     - hosts:
-        - staging.nest.shakar.tech
+        - staging.producer.shakar.tech
       secretName: staging-tls
 - op: add
   path: /metadata/annotations
