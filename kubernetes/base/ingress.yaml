@@ -17,7 +17,7 @@ spec:
       http:
         paths:
           - pathType: Prefix
-            path: /api(/|$)(.*)
+            path: /
             backend:
               service:
                 name: rmq-test-nest-producer
