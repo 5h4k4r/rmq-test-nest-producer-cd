@@ -11,6 +11,15 @@ spec:
       labels:
         app: rmq-test-nest-producer
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: In
+                    values:
+                      - worker
       containers:
         - name: rmq-test-nest-producer
           imagePullPolicy: Always
