@@ -6,7 +6,7 @@
   value:
     - hosts:
         - staging.producer.shakar.tech
-      secretName: staging-tls
+      secretName: lets-encrypt-staging.producer.shakar.tech
 - op: add
   path: /metadata/annotations
   value:

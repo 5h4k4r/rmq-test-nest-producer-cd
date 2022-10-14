@@ -6,7 +6,7 @@
   value:
     - hosts:
         - producer.shakar.tech
-      secretName: prod-tls
+      secretName: lets-encrypt-producer.shakar.tech
 - op: add
   path: /metadata/annotations
   value:
