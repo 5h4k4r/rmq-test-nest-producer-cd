@@ -19,4 +19,4 @@ kind: Kustomization
 images:
 - name: 5h4k4r/rmq-test-nest-producer
   newName: 5h4k4r/rmq-test-nest-producer
-  newTag: b031268b37692f1ef5b37767b96e9b85d295c138
+  newTag: 200c40abd4da997ff60a570832eb15985e564cee
